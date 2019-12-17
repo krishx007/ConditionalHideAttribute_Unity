@@ -14,6 +14,8 @@ public class Test : MonoBehaviour
 
     ////////////////[ConditionalHide()]
    
+     public  enum TestType { None, Test1, Test2, Test3 }
+
 
     [ConditionalHide(nameof(enable1))]
     public float enable1_f;
@@ -24,14 +26,26 @@ public class Test : MonoBehaviour
     [ConditionalHide(nameof(enable1))]
     public TestClass testClass;
 
-    public bool enable2;
 
+    public bool enable2;
 
     [ConditionalHide("enable2")]
     public string enable2_str;
 
     [ConditionalHide("enable2")]
     public float enable2_f;
+
+
+    //=======Enum===========
+    public TestType testType = TestType.None;
+
+   [ConditionalEnumHide(nameof(testType), (int)TestType.None)]
+    public string enumHide_str;
+
+   [ConditionalEnumHide(nameof(testType), (int)TestType.None)]
+    public float enumHide_f;
+
+
 
 
     // Start is called before the first frame update

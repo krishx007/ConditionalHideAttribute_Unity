@@ -308,3 +308,6 @@ MonoBehaviour:
   enable2: 0
   enable2_str: 
   enable2_f: 0
+  testType: 3
+  enumHide_str: 
+  enumHide_f: 0
